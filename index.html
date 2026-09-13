@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The DistantWorld GC</title>
+    <title>The DistantWorld GC (Beta 2)</title>
 </head>
 
 <body>
@@ -21,15 +21,15 @@
     </div>
 
     <div class = "blur-heading">
-        <h1 class = "title">The DistantWorld GC</h1>
-        <div class = "beta-label"><h1 class = "beta-text">Beta</h1></div>
+        <h1 class = "title">The DistantWorld GC 😭🫵💀</h1>
+        <div class = "beta-label"><h1 class = "beta-text">Beta2</h1></div>
     </div>
 
         <div class = "other-elements">
             <div class = "sub-content">
                 <input type = "text" placeholder = "Search as you type..." class = "searchInput" onkeyup="searchRules()">
                 <button class = "snapbutton" onclick = "window.location.href = 'https://www.snapchat.com/web'">Snapchat</button>
-                <button class = "settingsbutton">Settings</button>
+                <button class = "gamesbutton">Games</button>
             </div>
         </div>
 
@@ -63,7 +63,7 @@
 
             .beta-text {
                 color: #000000;
-                transform: scale(0.6);
+                transform: scale(0.5);
             }
 
         </style>
@@ -108,7 +108,7 @@
                 color: white;
             }
 
-            .snapbutton, .settingsbutton {
+            .snapbutton, .gamesbutton {
                 border: 1px solid #ffffff6d;
                 width: 150px;
                 height: 42px;
@@ -120,7 +120,7 @@
                 transition: all 0.5s ease;
             }
 
-            .snapbutton:hover, .settingsbutton:hover {
+            .snapbutton:hover, .gamesbutton:hover {
                 background-color: #ffffff1f;
             }
 
@@ -141,9 +141,10 @@
                 });
             }
 
-            const settingsButton = document.querySelector('.settingsbutton');
-            settingsButton.addEventListener('click', () => {
-                alert('Settings feature is not implemented yet.');
+            const gamesButton = document.querySelector('.gamesbutton');
+            const webContent = document.querySelector('.web-content');
+            gamesButton.addEventListener('click', () => {
+                window.location.href = 'games.html';
             });
         </script>
 
