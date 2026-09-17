@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The DistantWorld GC (Beta 2)</title>
+</head>
+
+<body>
+
+    <!-- PARALLAX BACKGROUND -->
+    <div class="background">
+
+        <div class="parallax-element element1">✦</div>
+        <div class="parallax-element element2">✦</div>
+        <div class="parallax-element element3">✧</div>
+        <div class="parallax-element element4">✦</div>
+        <div class="parallax-element element5">✧</div>
+        <div class="parallax-element element6">✦</div>
+
+    </div>
+
+    <div class = "blur-heading">
+        <h1 class = "title">The DistantWorld GC 😭🫵💀</h1>
+        <div class = "beta-label"><h1 class = "beta-text">Beta2</h1></div>
+    </div>
+
+        <div class = "other-elements">
+            <div class = "sub-content">
+                <input type = "text" placeholder = "Search as you type..." class = "searchInput" onkeyup="searchRules()">
+                <button class = "snapbutton" onclick = "window.location.href = 'https://www.snapchat.com/web'">Snapchat</button>
+                <button class = "gamesbutton">Games</button>
+            </div>
+        </div>
+
+        <style>
+            .blur-heading {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: row;
+                padding: 50px;
+                z-index: 1;
+                background: linear-gradient(to bottom, #000000, #00000000);
+            }
+
+            .title {
+                color: #efefef;
+                z-index: 5;
+            }
+
+            .beta-label {
+                margin-left: 20px;
+                background-color: #fff;
+                padding: 5px;
+                height: 30px;
+                width: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 5px;
+            }
+
+            .beta-text {
+                color: #000000;
+                transform: scale(0.5);
+            }
+
+        </style>
+    </div>
+
+    <!-- WEBSITE CONTENT -->
+    <div class="web-content">
+
+        <style>
+            .other-elements {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+            }
+
+            .sub-content {
+                display: flex;
+                flex-direction: row;
+                width: 65%;
+                padding: 10px;
+                height: 46px;
+                gap: 10px;
+                justify-content: center;
+                align-items: center;
+                background-color: #0000004b;
+                border-radius: 50px;
+                backdrop-filter: blur(10px);
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                z-index: 5;
+            }
+
+            .searchInput {
+                width: 100%;
+                height: 20px;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 20px;
+                backdrop-filter: blur(5px);
+                background-color: #0000004b;
+                color: white;
+            }
+
+            .snapbutton, .gamesbutton {
+                border: 1px solid #ffffff6d;
+                width: 150px;
+                height: 42px;
+                border-radius: 50px;
+                background-color: #00000000;
+                color: white;
+                cursor: pointer;
+                backdrop-filter: blur(5px);
+                transition: all 0.5s ease;
+            }
+
+            .snapbutton:hover, .gamesbutton:hover {
+                background-color: #ffffff1f;
+            }
+
+        </style>
+
+        <script>
+            function searchRules() {
+                const input = document.querySelector('.searchInput').value.toLowerCase();
+                const rules = document.querySelectorAll('.content > div');
+
+                rules.forEach(rule => {
+                    const ruleText = rule.textContent.toLowerCase();
+                    if (ruleText.includes(input)) {
+                        rule.style.display = '';
+                    } else {
+                        rule.style.display = 'none';
+                    }
+                });
+            }
+
+            const gamesButton = document.querySelector('.gamesbutton');
+            const webContent = document.querySelector('.web-content');
+            gamesButton.addEventListener('click', () => {
+                window.location.href = 'games.html';
+            });
+        </script>
+
+        <br>
+
+        <div class="content">
+
+            <div class="rule1">
+                <h1 class="text">Be Respectful</h1>
+                <p>All members of the group are expected to treat each other with respect and kindness.</p>
+            </div>
+
+            <div class="rule2">
+                <h1 class="text">Removing The Owner</h1>
+                <p>Removing the owner of the group without a valid reason is prohibited.</p>
+            </div>
+
+            <div class="rule3">
+                <h1 class="text">Notification Spamming</h1>
+                <p>Do not post irrelevant or excessive content in any threads.</p>
+            </div>
+
+            <div class="rule4">
+                <h1 class="text">Spam Calling</h1>
+                <p>Do not create unnecessary or excessive call attempts.</p>
+            </div>
+
+            <div class="rule5">
+                <h1 class="text">NSFW Not Allowed</h1>
+                <p>Do not post explicit or inappropriate content.</p>
+            </div>
+
+            <div class="rule6">
+                <h1 class="text">Excessive Arguments</h1>
+                <p>Do not engage in arguments or major debates.</p>
+            </div>
+
+            <div class="rule7">
+                <h1 class="text">Toxicity</h1>
+                <p>Do not engage in toxic behavior or harassment in any threads.</p>
+            </div>
+
+            <div class="rule8">
+                <h1 class="text">Racism</h1>
+                <p>Do not engage in racist behavior or any sort of discrimination in any threads.</p>
+            </div>
+
+            <div class="rule9">
+                <h1 class="text">Illegal Activities</h1>
+                <p>Do not engage in any illegal activities.</p>
+            </div>
+
+            <div class="rule10">
+                <h1 class="text">Major Threats</h1>
+                <p>Do not create dangerous threats that could lead to illegal activity.</p>
+            </div>
+
+            <div class="rule11">
+                <h1 class="text">Graphic Content</h1>
+                <p>Do not post graphic or disturbing content in any threads.</p>
+            </div>
+
+            <div class="rule12">
+                <h1 class="text">Irrelevant Member Removal</h1>
+                <p>Removing members for no reason is not allowed, unless it is for violating these rules.</p>
+            </div>
+
+            <div class="rule13">
+                <h1 class="text">Overscreen Sharing without Consent</h1>
+                <p>Do not take over someone elses screenshare without anyones permission.</p>
+            </div>
+
+            <div class="rule14">
+                <h1 class="text">Privacy Violations</h1>
+                <p>Do not violate the privacy of others by all means.</p>
+            </div>
+
+            <div class="rule15">
+                <h1 class="text">Rumors & Misleading Information</h1>
+                <p>Do not spread false or misleading information.</p>
+            </div>
+
+        </div>
+    </div>
+
+
+    <style>
+
+        /* =========================
+           MAIN PAGE
+        ========================= */
+
+        body {
+            background-image: url(https://i.ibb.co/M5fq0Ccz/IMG-3518.webp);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+
+            font-family: Arial, sans-serif;
+
+            margin: 0;
+
+            overflow-x: hidden;
+        }
+
+
+        /* =========================
+           PARALLAX BACKGROUND
+        ========================= */
+
+        .background {
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            z-index: -1;
+
+            pointer-events: none;
+        }
+
+
+        .parallax-element {
+            position: absolute;
+
+            color: white;
+
+            font-size: 50px;
+
+            opacity: 0.5;
+
+            text-shadow:
+                0 0 10px white,
+                0 0 20px white;
+        }
+
+
+        /* Individual positions */
+
+        .element1 {
+            top: 10%;
+            left: 10%;
+        }
+
+        .element2 {
+            top: 25%;
+            left: 80%;
+        }
+
+        .element3 {
+            top: 45%;
+            left: 20%;
+        }
+
+        .element4 {
+            top: 65%;
+            left: 75%;
+        }
+
+        .element5 {
+            top: 80%;
+            left: 40%;
+        }
+
+        .element6 {
+            top: 90%;
+            left: 90%;
+        }
+
+
+        /* =========================
+           WEBSITE CONTENT
+        ========================= */
+
+        .web-content {
+            padding: 40px;
+            z-index: 1;
+        }
+
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+
+        /* =========================
+           RULE CARDS
+        ========================= */
+
+        .rule1,
+        .rule2,
+        .rule3,
+        .rule4,
+        .rule5,
+        .rule6,
+        .rule7,
+        .rule8,
+        .rule9,
+        .rule10,
+        .rule11,
+        .rule12,
+        .rule13,
+        .rule14,
+        .rule15 {
+
+            background-color: rgba(0, 0, 0, 0.3);
+
+            backdrop-filter: blur(10px);
+
+            border-radius: 45px;
+
+            padding: 20px;
+
+            margin-bottom: 20px;
+
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.235);
+
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+
+        .text {
+            color: #ffffff;
+        }
+
+
+        /* =========================
+           PARAGRAPHS
+        ========================= */
+
+        p {
+            color: rgba(255, 255, 255, 0.779);
+        }
+
+    </style>
+
+
+    <!-- =========================
+         PARALLAX JAVASCRIPT
+    ========================= -->
+
+    <script>
+
+        window.addEventListener("scroll", () => {
+
+            const scroll = window.scrollY;
+
+
+            /*
+                Different objects move
+                at different speeds.
+            */
+
+            document.querySelector(".element1").style.transform =
+                `translateY(${scroll * 0.10}px)`;
+
+
+            document.querySelector(".element2").style.transform =
+                `translateY(${scroll * 0.20}px)`;
+
+
+            document.querySelector(".element3").style.transform =
+                `translateY(${scroll * 0.30}px)`;
+
+
+            document.querySelector(".element4").style.transform =
+                `translateY(${scroll * 0.40}px)`;
+
+
+            document.querySelector(".element5").style.transform =
+                `translateY(${scroll * 0.50}px)`;
+
+
+            document.querySelector(".element6").style.transform =
+                `translateY(${scroll * 0.60}px)`;
+
+        });
+
+    </script>
+
+</body>
+</html>
