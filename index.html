@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The DistantWorld GC (Beta 2)</title>
+    <title>The DistantWorld GC (Beta 3)</title>
 </head>
 
 <body>
@@ -22,14 +22,23 @@
 
     <div class = "blur-heading">
         <h1 class = "title">The DistantWorld GC 😭🫵💀</h1>
-        <div class = "beta-label"><h1 class = "beta-text">Beta2</h1></div>
+        <div class = "beta-label"><h1 class = "beta-text">Beta3</h1></div>
     </div>
 
         <div class = "other-elements">
             <div class = "sub-content">
                 <input type = "text" placeholder = "Search as you type..." class = "searchInput" onkeyup="searchRules()">
-                <button class = "snapbutton" onclick = "window.location.href = 'https://www.snapchat.com/web'">Snapchat</button>
+                <button class = "snapbutton" onclick = "window.location.href = 'https://www.snapchat.com/web'"><img src = "https://i.ibb.co/pBHNT7NR/snapchatlogo.png" alt = "snapchatlogo" width = "25" height = "25" draggable = "false"></button>
                 <button class = "gamesbutton">Games</button>
+            </div>
+
+            <div class = "sub-content">
+                <button class = "dycon-balance">My Balance on Dy'cons 📊</button>
+            </div>
+
+            <div class = "update">
+                <h1 class = "new-update">Introducing Beta 3</h1>
+                <button class = "whats-new">Whats New?</button>
             </div>
         </div>
 
@@ -51,7 +60,7 @@
 
             .beta-label {
                 margin-left: 20px;
-                background-color: #fff;
+                background-color: #ffffff;
                 padding: 5px;
                 height: 30px;
                 width: 50px;
@@ -73,6 +82,14 @@
     <div class="web-content">
 
         <style>
+            .update {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                padding: 45px;
+            }
+
             .other-elements {
                 display: flex;
                 flex-direction: column;
@@ -118,12 +135,57 @@
                 cursor: pointer;
                 backdrop-filter: blur(5px);
                 transition: all 0.5s ease;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
             }
 
             .snapbutton:hover, .gamesbutton:hover {
                 background-color: #ffffff1f;
             }
 
+            /*--------------------content 2-----------------------*/
+
+
+            .whats-new {
+                border: 1px solid #ffffff6d;
+                width: 150px;
+                height: 42px;
+                border-radius: 50px;
+                background-color: #00000000;
+                color: white;
+                cursor: pointer;
+                backdrop-filter: blur(5px);
+                transition: all 0.5s ease;
+            }
+
+            .dycon-balance {
+                border: 1px solid #ffffff6d;
+                width: 100%;
+                height: 42px;
+                border-radius: 50px;
+                background-color: #00000000;
+                color: white;
+                cursor: pointer;
+                backdrop-filter: blur(5px);
+                transition: all 0.5s ease;
+            }
+
+            .new-update {
+                padding: 10px;
+                border-radius: 20px;
+                text-align: center;
+                background: linear-gradient(to right, #ffffff, #b3e3ff);
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .whats-new:hover, .dycon-balance:hover {
+                background-color: #ffffff1f;
+            }
         </style>
 
         <script>
@@ -142,10 +204,23 @@
             }
 
             const gamesButton = document.querySelector('.gamesbutton');
+            const balanceButton = document.querySelector('.dycon-balance');
             const webContent = document.querySelector('.web-content');
             gamesButton.addEventListener('click', () => {
                 window.location.href = 'games.html';
             });
+
+            balanceButton.addEventListener('click', () => {
+                window.location.href = 'balance.html';
+            });
+
+            //-----------------------------------------------------------------------------------------------------
+
+            const newButton = document.querySelector('.whats-new');
+            newButton.addEventListener('click', () => {
+                window.location.href = 'new.html';
+            });
+
         </script>
 
         <br>
@@ -243,7 +318,7 @@
         ========================= */
 
         body {
-            background-image: url(https://i.ibb.co/M5fq0Ccz/IMG-3518.webp);
+            background-image: url(https://i.ibb.co/8DnCFjzg/IMG-4166.png);
             background-size: cover;
             background-position: center;
             background-attachment: fixed;

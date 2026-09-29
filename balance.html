@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The DistantWorld Dy'cons</title>
+</head>
+<body>
+    
+    <h1 class = "title">The DistantWorld Balance 📊</h1>
+    <br>
+
+    <div class = "container1">
+        <div class = "inner-container">
+            <button class = "backbutton" onclick = "window.location.href = 'index.html'">Home</button>
+        </div>
+    <style>
+        .container1 {
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        .inner-container {
+            width: 100%;
+            height: 46px;
+            gap: 10px;
+            display: flex;
+            justify-content: center;
+            background-color: #00000051;
+            align-items: center;
+            border-radius: 100px;
+            padding: 10px;
+        }
+
+        .backbutton {
+            border: 1px solid #ffffff6d;
+            width: 100%;
+            height: 42px;
+            border-radius: 50px;
+            background-color: #00000000;
+            color: white;
+            cursor: pointer;
+            backdrop-filter: blur(5px);
+            transition: all 0.5s ease;
+        }
+
+        .backbutton:hover {
+            background-color: #ffffff1f;
+        }
+    </style>
+
+    </div>
+
+    <br>
+    <h3 class = "title2">Dy'con Currency 💸</h3>
+
+    <div class = "contain">
+        <iframe class = "dycon-balance" width="721" height="500" seamless frameborder="0" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSD8UKPu8PxRn9VsjoP2-BkPoUHM6nbbmoom673GQHEG78_a_ShwkoLBHtQE_8zP4zDOAdUFQ8guwQ_/pubchart?oid=373372749&amp;format=interactive"></iframe>
+    </div>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(to bottom, #000000, #0c2e19, #000000, #000000);
+            padding: 50px;
+            box-sizing: border-box;
+        }
+
+        .title {
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .title2 {
+            text-align: center;
+            color: #ffffffa9;
+        }
+
+        .contain {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: scale(0.9);
+            padding: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .dycon-balance {
+            border-radius: 20px;
+            box-shadow: 0 2px 40px rgba(38, 255, 0, 0.618);
+            border: 1px solid #ffffff;
+        }
+
+        .contain:hover {
+            transform: scale(0.93);
+        }
+
+    </style>
+
+</body>
+</html>
